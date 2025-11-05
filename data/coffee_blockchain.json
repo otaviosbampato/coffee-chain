@@ -1,0 +1,62 @@
+{
+  "chain": [
+    {
+      "index": 0,
+      "timestamp": "2025-11-05T18:56:48.207558",
+      "data": {
+        "type": "genesis",
+        "message": "Coffee Traceability Blockchain Genesis Block"
+      },
+      "previous_hash": "0",
+      "nonce": 0,
+      "hash": "efe1aaac5d29cb8bc19cd92940926c15737b1fbd771ee2cfb36c735673c42d63"
+    },
+    {
+      "index": 1,
+      "timestamp": "2025-11-05T18:56:48.207736",
+      "data": {
+        "fiscalizer_id": "FISC001",
+        "coffee_batch": "BATCH-2025-001",
+        "origin": "Fazenda Santa Clara",
+        "harvest_date": "2025-10-15",
+        "quality_grade": "A",
+        "certifications": [
+          "Organic",
+          "Fair Trade"
+        ],
+        "weight_kg": 1000,
+        "processing_method": "Natural",
+        "notes": "High quality arabica beans from high altitude",
+        "entry_timestamp": "2025-11-05T18:56:48.207726",
+        "entry_type": "coffee_entry"
+      },
+      "previous_hash": "efe1aaac5d29cb8bc19cd92940926c15737b1fbd771ee2cfb36c735673c42d63",
+      "nonce": 132,
+      "hash": "00c6db419310e4833262f4dc3d6eb9193be35121e7f817ae8f0b65f9bed0e1c3"
+    },
+    {
+      "index": 2,
+      "timestamp": "2025-11-05T18:56:48.212637",
+      "data": {
+        "fiscalizer_id": "FISC002",
+        "coffee_batch": "BATCH-2025-002",
+        "origin": "Fazenda Boa Vista",
+        "harvest_date": "2025-10-20",
+        "quality_grade": "AA",
+        "certifications": [
+          "Organic"
+        ],
+        "weight_kg": 1500,
+        "processing_method": "Washed",
+        "notes": "Premium quality, specialty grade",
+        "entry_timestamp": "2025-11-05T18:56:48.212617",
+        "entry_type": "coffee_entry"
+      },
+      "previous_hash": "00c6db419310e4833262f4dc3d6eb9193be35121e7f817ae8f0b65f9bed0e1c3",
+      "nonce": 157,
+      "hash": "002e88ad91c480715626c4aa8bdf91279d7e3c37678080a5e7c29605cf917466"
+    }
+  ],
+  "length": 3,
+  "exported_at": "2025-11-05T18:56:48.217801"
+}

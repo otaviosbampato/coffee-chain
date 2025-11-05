@@ -1,0 +1,95 @@
+{
+  "chain": [
+    {
+      "index": 0,
+      "timestamp": "2025-11-05T18:56:48.325474",
+      "data": {
+        "type": "genesis",
+        "message": "Coffee Traceability Blockchain Genesis Block"
+      },
+      "previous_hash": "0",
+      "nonce": 0,
+      "hash": "ed4d1a5dc5c96a9783b8ff0c259ffd0335b739b819147fc89512b81ab0c9104e"
+    },
+    {
+      "index": 1,
+      "timestamp": "2025-11-05T18:56:48.325664",
+      "data": {
+        "fiscalizer_id": "FISC001",
+        "coffee_batch": "BATCH-2025-SC-001",
+        "origin": "Fazenda Santa Clara",
+        "location": "Minas Gerais, Brazil",
+        "harvest_date": "2025-10-15",
+        "quality_grade": "AA",
+        "certifications": [
+          "Organic",
+          "Fair Trade",
+          "Rainforest Alliance"
+        ],
+        "weight_kg": 1500,
+        "processing_method": "Washed",
+        "variety": "Arabica - Bourbon",
+        "altitude_meters": 1200,
+        "notes": "High quality arabica beans from high altitude region. Excellent cup profile.",
+        "entry_timestamp": "2025-11-05T18:56:48.325655",
+        "entry_type": "coffee_entry"
+      },
+      "previous_hash": "ed4d1a5dc5c96a9783b8ff0c259ffd0335b739b819147fc89512b81ab0c9104e",
+      "nonce": 173,
+      "hash": "0073315bd7bb17c2f7edf89fb4c240eead7274d7cb288d2add80b3bcba27550a"
+    },
+    {
+      "index": 2,
+      "timestamp": "2025-11-05T18:56:48.331477",
+      "data": {
+        "fiscalizer_id": "FISC002",
+        "coffee_batch": "BATCH-2025-BV-001",
+        "origin": "Fazenda Boa Vista",
+        "location": "São Paulo, Brazil",
+        "harvest_date": "2025-10-20",
+        "quality_grade": "A",
+        "certifications": [
+          "Organic"
+        ],
+        "weight_kg": 2000,
+        "processing_method": "Natural",
+        "variety": "Arabica - Catuai",
+        "altitude_meters": 1000,
+        "notes": "Natural process creates fruity, wine-like notes. Specialty grade.",
+        "entry_timestamp": "2025-11-05T18:56:48.331461",
+        "entry_type": "coffee_entry"
+      },
+      "previous_hash": "0073315bd7bb17c2f7edf89fb4c240eead7274d7cb288d2add80b3bcba27550a",
+      "nonce": 714,
+      "hash": "008b05f3edfcb47be21f06cdc1ef8835d8fb60877309b0e7179b263e05d38485"
+    },
+    {
+      "index": 3,
+      "timestamp": "2025-11-05T18:56:48.360704",
+      "data": {
+        "fiscalizer_id": "FISC001",
+        "coffee_batch": "BATCH-2025-SN-001",
+        "origin": "Fazenda Sol Nascente",
+        "location": "Espírito Santo, Brazil",
+        "harvest_date": "2025-10-25",
+        "quality_grade": "AA",
+        "certifications": [
+          "Organic",
+          "UTZ Certified"
+        ],
+        "weight_kg": 1800,
+        "processing_method": "Honey",
+        "variety": "Arabica - Acaiá",
+        "altitude_meters": 1100,
+        "notes": "Honey process provides balanced sweetness and body.",
+        "entry_timestamp": "2025-11-05T18:56:48.360684",
+        "entry_type": "coffee_entry"
+      },
+      "previous_hash": "008b05f3edfcb47be21f06cdc1ef8835d8fb60877309b0e7179b263e05d38485",
+      "nonce": 197,
+      "hash": "001d21b858bf1e1d2cb06664c57c7f2fb22e0d274a10bf602f235586634cc1b3"
+    }
+  ],
+  "length": 4,
+  "exported_at": "2025-11-05T18:56:48.370440"
+}

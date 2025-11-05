@@ -1,0 +1,18 @@
+{
+  "chain": [
+    {
+      "index": 0,
+      "timestamp": "2025-11-05T19:23:19.918952",
+      "data": {
+        "type": "genesis",
+        "message": "Coffee Traceability Blockchain Genesis Block"
+      },
+      "previous_hash": "0",
+      "nonce": 0,
+      "hash": "cf7210763ef1f7a0373daf96452850c067362641730fecbbcc314f57bf311be6"
+    }
+  ],
+  "length": 1,
+  "difficulty": 2,
+  "last_updated": "2025-11-05T19:23:19.919188"
+}

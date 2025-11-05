@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeChain - Coffee Traceability Blockchain</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-coffee"></i>
+                <span>CoffeeChain</span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="#dashboard" class="nav-link" data-section="dashboard">
+                    <i class="fas fa-chart-line"></i> Dashboard
+                </a>
+                <a href="#query" class="nav-link" data-section="query">
+                    <i class="fas fa-search"></i> Query Coffee
+                </a>
+                <a href="#blockchain" class="nav-link" data-section="blockchain">
+                    <i class="fas fa-link"></i> Blockchain
+                </a>
+            </div>
+            <div class="user-section" id="userSection">
+                <button class="btn btn-primary" id="loginBtn">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <i class="fas fa-coffee"></i>
+                        Coffee Traceability Blockchain
+                    </h1>
+                    <p class="hero-subtitle">
+                        Track your coffee from farm to cup with immutable blockchain technology
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-large btn-primary" id="heroLoginBtn">
+                            Get Started
+                        </button>
+                        <button class="btn btn-large btn-outline" id="learnMoreBtn">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="coffee-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features">
+                <h2 class="section-title">Why CoffeeChain?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Immutable Records</h3>
+                        <p>Once data is recorded, it cannot be altered or deleted, ensuring complete transparency.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Quality Verification</h3>
+                        <p>Fiscalizers verify and certify coffee quality at every stage of production.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Origin Tracking</h3>
+                        <p>Track coffee from its origin farm through processing to your cup.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Certifications</h3>
+                        <p>View all certifications including Organic, Fair Trade, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Section (Fiscalizer) -->
+        <section id="dashboard" class="section">
+            <div class="dashboard-container">
+                <h2 class="section-title">
+                    <i class="fas fa-plus-circle"></i> Create New Coffee Entry
+                </h2>
+                <p class="section-subtitle">Add a new coffee batch to the blockchain (Fiscalizers only)</p>
+
+                <div class="form-card">
+                    <form id="createEntryForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="coffeeBatch">
+                                    <i class="fas fa-barcode"></i> Coffee Batch ID *
+                                </label>
+                                <input type="text" id="coffeeBatch" name="coffeeBatch" 
+                                       placeholder="e.g., BATCH-2025-001" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="origin">
+                                    <i class="fas fa-map-marker-alt"></i> Origin / Farm Name *
+                                </label>
+                                <input type="text" id="origin" name="origin" 
+                                       placeholder="e.g., Fazenda Santa Clara" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location">
+                                    <i class="fas fa-globe"></i> Location
+                                </label>
+                                <input type="text" id="location" name="location" 
+                                       placeholder="e.g., Minas Gerais, Brazil">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="harvestDate">
+                                    <i class="fas fa-calendar"></i> Harvest Date *
+                                </label>
+                                <input type="date" id="harvestDate" name="harvestDate" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="qualityGrade">
+                                    <i class="fas fa-star"></i> Quality Grade *
+                                </label>
+                                <select id="qualityGrade" name="qualityGrade" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="AAA">AAA - Premium</option>
+                                    <option value="AA">AA - Excellent</option>
+                                    <option value="A">A - Very Good</option>
+                                    <option value="B">B - Good</option>
+                                    <option value="C">C - Standard</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="weightKg">
+                                    <i class="fas fa-weight"></i> Weight (kg) *
+                                </label>
+                                <input type="number" id="weightKg" name="weightKg" 
+                                       placeholder="e.g., 1500" min="1" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="processingMethod">
+                                    <i class="fas fa-cogs"></i> Processing Method
+                                </label>
+                                <select id="processingMethod" name="processingMethod">
+                                    <option value="">Select Method</option>
+                                    <option value="Washed">Washed</option>
+                                    <option value="Natural">Natural</option>
+                                    <option value="Honey">Honey</option>
+                                    <option value="Pulped Natural">Pulped Natural</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="variety">
+                                    <i class="fas fa-seedling"></i> Coffee Variety
+                                </label>
+                                <input type="text" id="variety" name="variety" 
+                                       placeholder="e.g., Arabica - Bourbon">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="altitude">
+                                    <i class="fas fa-mountain"></i> Altitude (meters)
+                                </label>
+                                <input type="number" id="altitude" name="altitude" 
+                                       placeholder="e.g., 1200" min="0">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="certifications">
+                                    <i class="fas fa-certificate"></i> Certifications
+                                </label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="cert" value="Organic"> Organic
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="cert" value="Fair Trade"> Fair Trade
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="cert" value="Rainforest Alliance"> Rainforest Alliance
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="cert" value="UTZ Certified"> UTZ Certified
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="notes">
+                                    <i class="fas fa-sticky-note"></i> Notes
+                                </label>
+                                <textarea id="notes" name="notes" rows="4" 
+                                          placeholder="Additional notes about the coffee batch..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-save"></i> Add to Blockchain
+                            </button>
+                            <button type="reset" class="btn btn-outline">
+                                <i class="fas fa-redo"></i> Reset Form
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Success/Error Message -->
+                <div id="formMessage" class="message" style="display: none;"></div>
+            </div>
+        </section>
+
+        <!-- Query Section -->
+        <section id="query" class="section">
+            <div class="query-container">
+                <h2 class="section-title">
+                    <i class="fas fa-search"></i> Query Coffee Information
+                </h2>
+                <p class="section-subtitle">Search for coffee batches in the blockchain</p>
+
+                <div class="search-card">
+                    <div class="search-tabs">
+                        <button class="tab-btn active" data-tab="batch">
+                            <i class="fas fa-barcode"></i> By Batch ID
+                        </button>
+                        <button class="tab-btn" data-tab="origin">
+                            <i class="fas fa-map-marker-alt"></i> By Origin
+                        </button>
+                        <button class="tab-btn" data-tab="all">
+                            <i class="fas fa-list"></i> All Entries
+                        </button>
+                    </div>
+
+                    <div class="search-content">
+                        <!-- Search by Batch -->
+                        <div class="search-tab-content active" id="batchTab">
+                            <div class="search-form">
+                                <input type="text" id="searchBatch" class="search-input" 
+                                       placeholder="Enter Batch ID (e.g., BATCH-2025-001)">
+                                <button class="btn btn-primary" id="searchBatchBtn">
+                                    <i class="fas fa-search"></i> Search
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Search by Origin -->
+                        <div class="search-tab-content" id="originTab">
+                            <div class="search-form">
+                                <input type="text" id="searchOrigin" class="search-input" 
+                                       placeholder="Enter Farm Name (e.g., Fazenda Santa Clara)">
+                                <button class="btn btn-primary" id="searchOriginBtn">
+                                    <i class="fas fa-search"></i> Search
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- All Entries -->
+                        <div class="search-tab-content" id="allTab">
+                            <div class="search-form">
+                                <button class="btn btn-primary btn-large" id="loadAllBtn">
+                                    <i class="fas fa-list"></i> Load All Entries
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div id="searchResults" class="results-container" style="display: none;">
+                    <h3 class="results-title">
+                        <i class="fas fa-check-circle"></i> Search Results
+                    </h3>
+                    <div id="resultsContent"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blockchain Section -->
+        <section id="blockchain" class="section">
+            <div class="blockchain-container">
+                <h2 class="section-title">
+                    <i class="fas fa-link"></i> Blockchain Information
+                </h2>
+                <p class="section-subtitle">View blockchain status and validation</p>
+
+                <div class="blockchain-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="blockCount">-</div>
+                            <div class="stat-label">Total Blocks</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="validStatus">-</div>
+                            <div class="stat-label">Status</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-gauge-high"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="difficulty">-</div>
+                            <div class="stat-label">Difficulty</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="entryCount">-</div>
+                            <div class="stat-label">Coffee Entries</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blockchain-actions">
+                    <button class="btn btn-primary" id="refreshBlockchainBtn">
+                        <i class="fas fa-sync"></i> Refresh Info
+                    </button>
+                    <button class="btn btn-success" id="validateBlockchainBtn">
+                        <i class="fas fa-check"></i> Validate Chain
+                    </button>
+                </div>
+
+                <!-- Validation Result -->
+                <div id="validationResult" class="message" style="display: none;"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">
+                            <i class="fas fa-user"></i> Username
+                        </label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">
+                            <i class="fas fa-lock"></i> Password
+                        </label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                </form>
+                <div id="loginMessage" class="message" style="display: none;"></div>
+                
+                <div class="test-credentials">
+                    <p><strong>Test Credentials:</strong></p>
+                    <p><strong>Fiscalizer:</strong> fiscalizer1 / fisc123</p>
+                    <p><strong>Client:</strong> client1 / client123</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
